@@ -7,37 +7,58 @@ def show():
 def check():
     if game_board[0][0] == "O" and game_board[0][1] == "O" and game_board[0][2] == "O":
         print("Player1 win!")
+        quit()
     if game_board[1][0] == "O" and game_board[1][1] == "O" and game_board[1][2] == "O":
         print("Player1 win!")
+        quit()
     if game_board[2][0] == "O" and game_board[2][1] == "O" and game_board[2][2] == "O":
         print("Player1 win!")
+        quit()
     if game_board[0][0] == "O" and game_board[1][0] == "O" and game_board[2][0] == "O":
         print("Player1 win!")
+        quit()
     if game_board[0][1] == "O" and game_board[1][1] == "O" and game_board[2][1] == "O":
         print("Player1 win!")
+        quit()
     if game_board[0][2] == "O" and game_board[1][2] == "O" and game_board[2][2] == "O":
         print("Player1 win!")
+        quit()
     if game_board[0][0] == "O" and game_board[1][1] == "O" and game_board[2][2] == "O":
         print("Player1 win!")
+        quit()
     if game_board[0][2] == "O" and game_board[1][1] == "O" and game_board[2][0] == "O":
         print("Player1 win!")
+        quit()
     
     if game_board[0][0] == "X" and game_board[0][1] == "X" and game_board[0][2] == "X":
         print("Player2 win!")
+        quit()
     if game_board[1][0] == "X" and game_board[1][1] == "X" and game_board[1][2] == "X":
         print("Player2 win!")
+        quit()
     if game_board[2][0] == "X" and game_board[2][1] == "X" and game_board[2][2] == "X":
         print("Player2 win!")
+        quit()
     if game_board[0][0] == "X" and game_board[1][0] == "X" and game_board[2][0] == "X":
         print("Player2 win!")
+        quit()
     if game_board[0][1] == "X" and game_board[1][1] == "X" and game_board[2][1] == "X":
         print("Player2 win!")
+        quit()
     if game_board[0][2] == "X" and game_board[1][2] == "X" and game_board[2][2] == "X":
         print("Player2 win!")
+        quit()
     if game_board[0][0] == "X" and game_board[1][1] == "X" and game_board[2][2] == "X":
         print("Player2 win!")
+        quit()
     if game_board[0][2] == "X" and game_board[1][1] == "X" and game_board[2][0] == "X":
         print("Player2 win!")
+        quit()
+
+def equal():
+     if game_board[0][0] != "-" and game_board[0][1] != "-" and game_board[0][2] != "-" and game_board[1][0] != "-" and game_board[1][1] != "-" and game_board[1][2] != "-" and game_board[2][0] != "-" and game_board[2][1] != "-" and game_board[2][2] != "-":
+        print("equal")
+        quit()
 
 game_board = [["-","-","-"],
               ["-","-","-"],
@@ -54,14 +75,13 @@ while True:
                     game_board[row][col] = "O" 
                     show()
                     check()
+                    equal()
                     break 
                 else:
                     print("Yek khone dige vard kon!")
             else:
                 print("Bein 0 va 2 vared kon!")
-    if game_board[0][0] != "-" and game_board[0][1] != "-" and game_board[0][2] != "-" and game_board[1][0] != "-" and game_board[1][1] != "-" and game_board[1][2] != "-" and game_board[2][0] != "-" and game_board[2][1] != "-" and game_board[2][2] != "-" and check() != True:
-                    print("equal")
-                    break
+
     
     print("Player2") # => X
     while True:
@@ -72,11 +92,9 @@ while True:
                     game_board[row][col] = "X"
                     show()
                     check()
+                    equal()
                     break
                 else:
                     print("Yek khone dige vard kon!")
             else:
                 print("Bein 0 va 2 vared kon!")
-    if game_board[0][0] != "-" and game_board[0][1] != "-" and game_board[0][2] != "-" and game_board[1][0] != "-" and game_board[1][1] != "-" and game_board[1][2] != "-" and game_board[2][0] != "-" and game_board[2][1] != "-" and game_board[2][2] != "-" and check() != True:
-         print("equal")
-         break
